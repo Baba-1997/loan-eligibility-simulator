@@ -1,0 +1,1057 @@
+
+.site-header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 15px 40px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding-right: 24px;
+    border-right: 1px solid #cbd0d8;
+}
+
+.logo img {
+    display: block;
+    width: 160px;
+    height: auto;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+    margin-left: 24px;
+}
+
+.main-nav a {
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    color: #222222;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: #d9efff;
+    border-color: #008cff;
+    color: #222222;
+}
+
+.main-nav .help,
+.main-nav .login-link {
+    position: relative;
+}
+
+.main-nav .help {
+    margin-left: auto;
+}
+
+.main-nav .login-link {
+    margin-left: 8px;
+}
+
+.main-nav .help::before,
+.main-nav .login-link::before {
+    position: absolute;
+    top: 10%;
+    left: -9px;
+    height: 80%;
+    border-left: 1px solid #cbd0d8;
+    content: "";
+    pointer-events: none;
+}
+
+body > main:not(.financial-details-main):not(.credit-enquiry-notice-main) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 40px;
+    padding: 45px 5%;
+    background-color: #f3f9ff;
+    color: #10264a;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    min-width: 0;
+}
+
+.page-label {
+    display: inline-block;
+    margin: 0 0 18px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    background-color: #d9efff;
+    color: #007bff;
+    font-size: 14px;
+}
+
+.hero-content h1 {
+    margin: 20px 0;
+    font-size: 38px;
+    line-height: 1.15;
+}
+
+.hero-content > p {
+    line-height: 1.6;
+}
+
+.hero-content ul {
+    margin: 24px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hero-content li {
+    margin-bottom: 12px;
+}
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 26px;
+    border: 1px solid #087fff;
+    border-radius: 10px;
+    background-color: #087fff;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.primary-button:hover {
+    background-color: #0067d9;
+}
+
+.preview-card {
+    min-width: 0;
+    padding: 30px;
+    border: 1px solid #dceaf7;
+    border-radius: 18px;
+    background-color: white;
+    box-shadow: 0 8px 24px rgba(20, 60, 100, 0.08);
+}
+
+.preview-card h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.preview-card p {
+    margin: 12px 0;
+    padding: 12px;
+    border: 1px solid #dce3eb;
+    border-radius: 8px;
+    color: #65758b;
+}
+
+.site-footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 8px;
+    padding: 12px 32px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+.information-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #000000;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.footer-content h2 {
+    margin: 0 0 4px;
+    color: #111111;
+    font-size: 16px;
+}
+
+.footer-content p {
+    margin: 0;
+    color: #52657c;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.financial-details-main {
+    display: block;
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #10264a;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.financial-details-page {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(280px, 1fr);
+    align-items: start;
+    gap: 36px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 16px 3% 28px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.financial-form-section {
+    min-width: 0;
+    padding: 8px 0 16px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.financial-details-main .page-label {
+    display: inline-block;
+    margin: 0 0 18px;
+    padding: 8px 14px;
+    border-radius: 12px;
+    background-color: #d9efff;
+    color: #008cff;
+    font-size: 14px;
+}
+
+.progress-steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    margin: 28px 0 32px;
+}
+
+.progress-step {
+    position: relative;
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    text-align: center;
+}
+
+.progress-step:not(:last-child)::after {
+    position: absolute;
+    top: 20px;
+    left: calc(50% + 24px);
+    width: calc(100% - 48px);
+    height: 2px;
+    background-color: #b8c6d8;
+    content: "";
+}
+
+.progress-step span {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #b8c6d8;
+    border-radius: 50%;
+    background-color: white;
+    color: #163b63;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.progress-step.active span {
+    border: 2px solid #008cff;
+    color: #008cff;
+}
+
+.progress-step p {
+    margin: 8px 0 0;
+    color: #163b63;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.progress-step.active p {
+    color: #008cff;
+}
+
+.financial-form-section h1 {
+    margin: 0 0 10px;
+    color: #092b55;
+    font-size: 26px;
+    line-height: 1.25;
+}
+
+.form-description {
+    margin: 0 0 22px;
+    color: #405c7e;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.financial-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.financial-fields .form-group {
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #d2d7de;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.financial-details-main .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #17324f;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.input-with-currency {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    min-height: 38px;
+    box-sizing: border-box;
+}
+
+.input-with-currency span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    padding: 0 8px;
+    background-color: #eeeeee;
+    color: #17324f;
+    box-sizing: border-box;
+}
+
+.input-with-currency input {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    border-left: none;
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.input-with-currency input:focus {
+    outline: 2px solid #008cff;
+    outline-offset: -2px;
+}
+
+.repayment-term-group {
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    border: 1px solid #d2d7de;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.repayment-term-group select {
+    width: 100%;
+    min-height: 42px;
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    background-color: white;
+    font-family: inherit;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.repayment-term-group select:focus {
+    outline: 2px solid #008cff;
+    outline-offset: 1px;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.secondary-button,
+.form-actions .primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 24px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.secondary-button {
+    border: 1px solid #cbd5e1;
+    background-color: white;
+    color: #092b55;
+}
+
+.secondary-button:hover {
+    background-color: #edf6ff;
+}
+
+.form-actions .primary-button {
+    border: 1px solid #008cff;
+    background-color: #008cff;
+    color: white;
+}
+
+.form-actions .primary-button:hover {
+    background-color: #0073d1;
+}
+
+.financial-details-page .credit-notice {
+    align-self: stretch;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 32px;
+    border-radius: 12px;
+    background-color: #eaf6ff;
+    color: #24486e;
+    line-height: 1.7;
+    box-sizing: border-box;
+}
+
+.notice-heading {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    align-items: start;
+    gap: 18px;
+}
+
+.shield-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #1685d8;
+    color: white;
+    box-sizing: border-box;
+}
+
+.shield-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.notice-copy {
+    min-width: 0;
+}
+
+.notice-copy h2,
+.keep-in-mind-heading h2 {
+    margin: 0;
+    color: #082b52;
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.notice-copy p {
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.notice-divider {
+    margin: 24px 0 20px;
+    border: none;
+    border-top: 1px solid #cfe4f5;
+}
+
+.keep-in-mind-heading {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    align-items: center;
+    gap: 18px;
+    margin: 0 0 18px;
+}
+
+.information-icon-blue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #1685e5;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.notice-list li {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr);
+    align-items: start;
+    gap: 14px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #52799a;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.notice-illustration {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 100px;
+    margin: 24px auto 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, #dcefff 0%, #eaf6ff 72%);
+}
+
+.document-icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    width: 60px;
+    height: 72px;
+    padding: 10px;
+    border: 3px solid #5b8bb7;
+    border-radius: 3px;
+    background-color: #f8fcff;
+    box-sizing: border-box;
+    transform: translate(-8px, -3px);
+}
+
+.document-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #5b8bb7;
+}
+
+.illustration-shield {
+    position: absolute;
+    z-index: 2;
+    right: 28px;
+    bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 46px;
+    border-radius: 45% 45% 50% 50%;
+    background-color: #087fce;
+    color: white;
+}
+
+.illustration-shield svg {
+    width: 30px;
+    height: 30px;
+}
+
+.financial-footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    margin: 0;
+    padding: 16px 3%;
+    border-top: 1px solid #e0e0e0;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.footer-info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #000000;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.financial-footer-content h2 {
+    margin: 0 0 4px;
+    color: #111111;
+    font-size: 16px;
+}
+
+.financial-footer-content p {
+    margin: 0;
+    color: #52657c;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.credit-enquiry-notice-main {
+    display: block;
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #10264a;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.credit-enquiry-notice-page {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(320px, 0.85fr);
+    align-items: start;
+    gap: 32px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 28px;
+    box-sizing: border-box;
+}
+
+.credit-enquiry-content {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.credit-enquiry-content .page-label {
+    margin-bottom: 22px;
+}
+
+.credit-enquiry-content .progress-steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    gap: 8px;
+    margin: 28px 0 34px;
+}
+
+.credit-enquiry-content .progress-step {
+    position: relative;
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    text-align: center;
+}
+
+.credit-enquiry-content .progress-step p {
+    max-width: 100%;
+    margin: 8px 0 0;
+    font-size: 12px;
+    line-height: 1.3;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.credit-enquiry-content h1 {
+    margin: 0 0 12px;
+    color: #092b55;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.credit-enquiry-description {
+    margin: 0 0 20px;
+    color: #405c7e;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.credit-information-panel {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr);
+    align-items: start;
+    gap: 14px;
+    width: 100%;
+    margin: 0 0 16px;
+    padding: 18px;
+    border-radius: 12px;
+    background-color: #d9efff;
+    color: #10264a;
+    box-sizing: border-box;
+}
+
+.credit-information-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #008cff;
+    color: #008cff;
+    font-size: 22px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.credit-information-content {
+    min-width: 0;
+}
+
+.credit-information-content h2 {
+    margin: 0 0 10px;
+    color: #002f87;
+    font-size: 17px;
+}
+
+.credit-information-content ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.credit-information-content li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.credit-information-content li:last-child {
+    margin-bottom: 0;
+}
+
+.credit-acknowledgement {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    width: 100%;
+    margin: 0 0 16px;
+    padding: 16px;
+    background-color: #ff0000;
+    color: #111111;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.credit-acknowledgement input {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin: 2px 0 0;
+    accent-color: #008cff;
+    cursor: pointer;
+}
+
+.credit-enquiry-notice-page .form-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 0;
+}
+
+.credit-enquiry-notice-page .secondary-button,
+.credit-enquiry-notice-page .form-actions .primary-button {
+    min-height: 44px;
+    padding: 0 24px;
+}
+
+.credit-enquiry-notice-page .credit-notice {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 24px;
+    border-radius: 14px;
+    background-color: #eaf6ff;
+    box-sizing: border-box;
+}
+
+.credit-enquiry-notice-page .notice-heading {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    align-items: start;
+    gap: 14px;
+}
+
+.credit-enquiry-notice-page .notice-copy h2,
+.credit-enquiry-notice-page .keep-in-mind-heading h2 {
+    font-size: 20px;
+}
+
+.credit-enquiry-notice-page .notice-copy p {
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.credit-enquiry-notice-page .notice-divider {
+    margin: 20px 0;
+}
+
+.credit-enquiry-notice-page .keep-in-mind-heading {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.credit-enquiry-notice-page .notice-list {
+    gap: 14px;
+    padding-left: 0;
+}
+
+.credit-enquiry-notice-page .notice-list li {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 12px;
+    font-size: 13px;
+}
+
+.credit-enquiry-notice-page .notice-illustration {
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .site-header {
+        padding: 12px 20px;
+    }
+
+    .logo img {
+        width: 130px;
+    }
+
+    .main-nav {
+        gap: 6px;
+        margin-left: 14px;
+    }
+
+    .main-nav a {
+        padding: 7px 8px;
+        font-size: 12px;
+    }
+
+    .financial-details-page {
+        gap: 20px;
+    }
+
+    .credit-enquiry-notice-page {
+        grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.9fr);
+        gap: 20px;
+        padding: 24px 20px;
+    }
+
+    .credit-enquiry-notice-page .credit-notice {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 760px) {
+    .site-header {
+        flex-wrap: wrap;
+        padding: 12px 16px;
+    }
+
+    .logo {
+        padding-right: 14px;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-left: 14px;
+    }
+
+    .main-nav a {
+        padding: 7px 8px;
+        font-size: 12px;
+    }
+
+    body > main:not(.financial-details-main):not(.credit-enquiry-notice-main) {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        padding: 28px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .financial-details-page {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+        gap: 20px;
+        padding: 16px;
+    }
+
+    .financial-form-section h1 {
+        font-size: 23px;
+    }
+
+    .credit-notice {
+        height: auto;
+    }
+
+    .credit-enquiry-notice-page {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        padding: 24px 16px;
+    }
+
+    .credit-enquiry-content h1 {
+        font-size: 24px;
+    }
+
+    .credit-enquiry-notice-page .credit-notice {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .financial-fields {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .progress-steps {
+        gap: 6px;
+    }
+
+    .progress-step:not(:last-child)::after {
+        top: 16px;
+        left: calc(50% + 19px);
+        width: calc(100% - 38px);
+    }
+
+    .progress-step span {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .progress-step p {
+        font-size: 11px;
+    }
+
+    .form-actions {
+        flex-wrap: wrap;
+    }
+
+    .financial-details-page .credit-notice {
+        padding: 20px;
+    }
+
+    .notice-heading,
+    .keep-in-mind-heading {
+        grid-template-columns: 40px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .shield-icon,
+    .information-icon-blue {
+        width: 40px;
+        height: 40px;
+    }
+
+    .notice-copy h2,
+    .keep-in-mind-heading h2 {
+        font-size: 18px;
+    }
+
+    .notice-list {
+        padding-left: 0;
+    }
+
+    .credit-enquiry-content .progress-steps {
+        gap: 4px;
+    }
+
+    .credit-enquiry-content .progress-step p {
+        font-size: 10px;
+    }
+
+    .credit-information-panel {
+        padding: 14px;
+    }
+
+    .credit-acknowledgement {
+        padding: 12px;
+    }
+}

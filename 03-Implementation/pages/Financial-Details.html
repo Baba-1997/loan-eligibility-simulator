@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <title>Financial Details</title>
+</head>
+<body>
+    <header class="site-header">
+        <a href="../index.html" class="logo">
+            <img src="../images/CapitecBank.png" alt="Capitec Bank logo">
+        </a>
+
+        <nav class="main-nav">
+            <a href="../index.html" class="personal-loans">Personal Loans</a>
+            <a href="Financial-Guidance.html">Financial Guidance</a>
+            <a href="Direct-Loans.html">Direct Loans</a>
+            <a href="Find-Branch.html">Find Branch</a>
+            <a href="Help.html" class="help">Help</a>
+            <a href="Login.html" class="login-link">Log in</a>
+        </nav>
+    </header>
+
+    <main class="financial-details-main">
+        <div class="financial-details-page">
+            <section class="financial-form-section">
+                <p class="page-label">Loan Eligibility Simulator</p>
+
+                <div class="progress-steps">
+                    <div class="progress-step active">
+                        <span>1</span>
+                        <p>Your details</p>
+                    </div>
+
+                    <div class="progress-step">
+                        <span>2</span>
+                        <p>Financial Details</p>
+                    </div>
+
+                    <div class="progress-step">
+                        <span>3</span>
+                        <p>Credit Enquiry</p>
+                    </div>
+
+                    <div class="progress-step">
+                        <span>4</span>
+                        <p>Assessment</p>
+                    </div>
+                </div>
+
+                <h1>Tell us about your finances</h1>
+
+                <p class="form-description">
+                    Enter your monthly income, expenses and other financial details
+                    to get an estimate of your loan affordability.
+                </p>
+
+                <form id="financial-details-form">
+                    <div class="financial-fields">
+                        <div class="form-group">
+                            <label for="monthly-income">Monthly income</label>
+
+                            <div class="input-with-currency">
+                                <span>R</span>
+                                <input
+                                    type="number"
+                                    id="monthly-income"
+                                    name="monthlyIncome"
+                                    min="0.01"
+                                    step="0.01"
+                                    placeholder="e.g. R25,000"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="monthly-expenses">Monthly expenses</label>
+
+                            <div class="input-with-currency">
+                                <span>R</span>
+                                <input
+                                    type="number"
+                                    id="monthly-expenses"
+                                    name="monthlyExpenses"
+                                    min="0"
+                                    step="0.01"
+                                    placeholder="e.g. R12,000"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="existing-debt">Existing monthly debt repayments</label>
+
+                            <div class="input-with-currency">
+                                <span>R</span>
+                                <input
+                                    type="number"
+                                    id="existing-debt"
+                                    name="existingDebt"
+                                    min="0"
+                                    step="0.01"
+                                    placeholder="e.g. R2,500"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loan-amount">Requested loan amount</label>
+
+                            <div class="input-with-currency">
+                                <span>R</span>
+                                <input
+                                    type="number"
+                                    id="loan-amount"
+                                    name="loanAmount"
+                                    min="1000"
+                                    max="500000"
+                                    step="100"
+                                    placeholder="e.g. R50,000"
+                                    required
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group repayment-term-group">
+                        <label for="repayment-term">Repayment term</label>
+
+                        <select id="repayment-term" name="repaymentTerm" required>
+                            <option value="">Select a term</option>
+                            <option value="12">12 months</option>
+                            <option value="24">24 months</option>
+                            <option value="36">36 months</option>
+                            <option value="48">48 months</option>
+                            <option value="60">60 months</option>
+                            <option value="72">72 months</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <a href="../index.html" class="secondary-button">← Back</a>
+                        <button type="submit" class="primary-button">Continue →</button>
+                    </div>
+                </form>
+
+                <div id="calculation-results" class="calculation-results" hidden>
+                    <h2 id="result-heading">Your affordability assessment</h2>
+
+                    <p id="result-message"></p>
+
+                    <p>
+                        Estimated monthly repayment:
+                        <strong id="monthly-repayment"></strong>
+                    </p>
+
+                    <p>
+                        Total interest:
+                        <strong id="total-interest"></strong>
+                    </p>
+
+                    <p>
+                        Disposable income before the new loan:
+                        <strong id="disposable-income"></strong>
+                    </p>
+
+                    <p>
+                        Money left after the new repayment:
+                        <strong id="remaining-income"></strong>
+                    </p>
+                </div>
+            </section>
+
+            <aside class="credit-notice">
+                <div class="notice-heading">
+                    <div class="shield-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2 20 5v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5l8-3Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="m8.5 12 2.3 2.3 4.7-5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+
+                    <div class="notice-copy">
+                        <h2>Credit enquiry notice</h2>
+                        <p>
+                            A formal loan application may involve a credit enquiry,
+                            which can affect your credit profile. This simulator does
+                            not perform a real credit enquiry.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="notice-divider"></div>
+
+                <div class="keep-in-mind-heading">
+                    <span class="information-icon-blue" aria-hidden="true">i</span>
+                    <h2>Keep in mind</h2>
+                </div>
+
+                <ul class="notice-list">
+                    <li>
+                        <span class="check-icon" aria-hidden="true">✓</span>
+                        <span>Your income and expenses help estimate affordability.</span>
+                    </li>
+
+                    <li>
+                        <span class="check-icon" aria-hidden="true">✓</span>
+                        <span>Existing debt repayments are included in the calculation.</span>
+                    </li>
+
+                    <li>
+                        <span class="check-icon" aria-hidden="true">✓</span>
+                        <span>The loan amount and repayment term affect estimated monthly repayments.</span>
+                    </li>
+                </ul>
+
+                <div class="notice-illustration">
+                    <div class="document-icon" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="illustration-shield">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2 20 5v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5l8-3Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="m8.5 12 2.3 2.3 4.7-5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="financial-footer">
+        <div class="footer-info-icon" aria-hidden="true">i</div>
+
+        <div class="financial-footer-content">
+            <h2>Important information</h2>
+            <p>
+                This is an educational simulation, not a loan approval
+                or formal credit assessment.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../JavaScript/Financial-Details.js"></script>
+</body>
+</html>

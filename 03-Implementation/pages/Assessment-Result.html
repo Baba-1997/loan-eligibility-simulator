@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <title>Assessment Results</title>
+</head>
+<body>
+    <header class="site-header">
+        <a href="../index.html" class="logo">
+            <img src="../images/CapitecBank.png" alt="Capitec Bank logo">
+        </a>
+
+        <nav class="main-nav">
+            <a href="../index.html" class="personal-loan">Personal loans</a>
+            <a href="Financial-Guidance.html">Financial Guidance</a>
+            <a href="Direct-Loans.html">Direct Loans</a>
+            <a href="Find-Branch.html">Find Branch</a>
+            <a href="Help.html" class="help">Help</a>
+            <a href="Login.html" class="login-link">Log in</a>
+        </nav>
+    </header>
+
+    <main class="assessment-results">
+        <div class="assessment-results-page">
+            <section class="assessment-result-content">
+                <p class="page-label">Loan Eligibility Simulator</p>
+
+                <div class="progress-steps">
+                    <div class="progress-step">
+                        <span>1</span>
+                        <p>Your details</p>
+                    </div>
+
+                    <div class="progress-step">
+                        <span>2</span>
+                        <p>Financial details</p>
+                    </div>
+
+                    <div class="progress-step">
+                        <span>3</span>
+                        <p>Credit Enquiry</p>
+                    </div>
+
+                    <div class="progress-step active">
+                        <span>4</span>
+                        <p>Assessment</p>
+                    </div>
+                </div>
+
+                <h1>Your estimated loan result</h1>
+
+                <p class="assessment-subtitle">
+                    Based on the information you provided, here is an estimate of your loan affordability.
+                </p>
+
+                <div class="loan-result-message">
+                    <h2 id="result-heading">Your assessment result</h2>
+                    <p id="result-message"></p>
+                </div>
+
+                <div class="assessment-cards">
+                    <section class="estimated-monthly-repayment">
+                        <h2 id="monthly-repayment">R0.00</h2>
+                        <p>Estimated monthly repayment</p>
+                    </section>
+
+                    <section class="estimated-total-repayment">
+                        <h2 id="total-repayment">R0.00</h2>
+                        <p>Estimated total repayment</p>
+                    </section>
+
+                    <section class="estimated-remaining-disposable-income">
+                        <h2 id="remaining-income">R0.00</h2>
+                        <p>Money left after the new repayment</p>
+                    </section>
+
+                    <section class="your-financial-details">
+                        <h2>Your financial details</h2>
+
+                        <div class="financial-detail-row">
+                            <span>Monthly income</span>
+                            <strong id="result-income">R0.00</strong>
+                        </div>
+
+                        <div class="financial-detail-row">
+                            <span>Monthly expenses</span>
+                            <strong id="result-expenses">R0.00</strong>
+                        </div>
+
+                        <div class="financial-detail-row">
+                            <span>Existing monthly debt repayments</span>
+                            <strong id="result-existing-debt">R0.00</strong>
+                        </div>
+
+                        <div class="financial-detail-row">
+                            <span>Requested loan amount</span>
+                            <strong id="result-loan-amount">R0.00</strong>
+                        </div>
+
+                        <div class="financial-detail-row">
+                            <span>Repayment term</span>
+                            <strong id="result-repayment-term">0 months</strong>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="form-actions">
+                    <a href="Financial-Details.html" class="secondary-button">← Back</a>
+                    <button type="button" class="primary-button">
+                        Choose your next step →
+                    </button>
+                </div>
+            </section>
+
+            <aside class="credit-notice">
+                <div class="notice-heading">
+                    <div class="shield-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2 20 5v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5l8-3Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="m8.5 12 2.3 2.3 4.7-5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+
+                    <div class="notice-copy">
+                        <h2>What happened in this step?</h2>
+                        <p>
+                            We assessed the financial information you provided to estimate your loan affordability and eligibility. No actual credit enquiry was performed by the simulator.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="notice-divider"></div>
+
+                <div class="important-to-know">
+                    <span class="information-icon-blue" aria-hidden="true">i</span>
+                    <h2>Important to know</h2>
+                </div>
+
+                <ul class="notice-list">
+                    <li>This is an estimated result, not a loan offer or approval.</li>
+                    <li>If you proceed, a credit enquiry and full credit assessment may be conducted as part of the formal application.</li>
+                    <li>The final loan amount, interest rate and repayment term may differ following the formal assessment.</li>
+                </ul>
+
+                <div class="notice-divider"></div>
+
+                <div class="notice-heading">
+                    <div class="information-icon-blue" aria-hidden="true">▦</div>
+                    <div class="notice-copy">
+                        <h2>How we calculated this</h2>
+                        <p>Your estimated repayments and disposable income are based on:</p>
+                    </div>
+                </div>
+
+                <ul class="notice-list">
+                    <li>Your monthly income and expenses</li>
+                    <li>Your existing debt repayments</li>
+                    <li>The loan amount you selected</li>
+                    <li>The repayment term you selected</li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="financial-footer">
+        <div class="footer-info-icon" aria-hidden="true">i</div>
+        <div class="financial-footer-content">
+            <h2>Important information</h2>
+            <p>
+                This is an educational simulation, not a loan approval or formal credit assessment.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../JavaScript/Assessment-Result.js"></script>
+</body>
+</html>
