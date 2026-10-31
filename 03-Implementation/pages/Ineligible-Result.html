@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <title>Ineligible Results</title>
+</head>
+<body>
+    <header class="site-header">
+        <a href="../index.html" class="logo">
+            <img src="../images/CapitecBank.png" alt="Capitec Bank logo">
+        </a>
+
+        <nav class="main-nav">
+            <a href="../index.html">Personal loans</a>
+            <a href="Financial-Guidance.html">Financial Guidance</a>
+            <a href="Direct-Loans.html">Direct Loans</a>
+            <a href="Find-Branch.html">Find Branch</a>
+            <a href="Help.html" class="help">Help</a>
+            <a href="Login.html" class="login-link">Log in</a>
+        </nav>
+    </header>
+
+    <main class="assessment-results ineligible-results">
+        <div class="assessment-results-page">
+
+            <section class="assessment-result-content">
+                <p class="page-label">Loan Eligibility Simulator</p>
+
+                <div class="progress-steps">
+                    <div class="progress-step">
+                        <span>1</span>
+                        <p>Your details</p>
+                    </div>
+
+                    <div class="progress-step">
+                        <span>2</span>
+                        <p>Financial details</p>
+                    </div>
+
+                    <div class="progress-step">
+                        <span>3</span>
+                        <p>Credit enquiry</p>
+                    </div>
+
+                    <div class="progress-step active">
+                        <span>4</span>
+                        <p>Assessment</p>
+                    </div>
+                </div>
+
+                <h1>Your loan results</h1>
+
+                <p class="assessment-subtitle">
+                    Based on your financial information, the requested
+                    loan does not meet this simulator's affordability limit.
+                </p>
+
+                <div class="loan-result-message">
+                    <h2 id="result-heading">
+                        You may not qualify right now
+                    </h2>
+
+                    <p id="result-message">
+                        Based on our initial checks, we're unable to
+                        provide an affordable loan estimate for your
+                        requested amount at this time. A formal
+                        assessment may produce a different outcome.
+                    </p>
+                </div>
+
+                <h2>What may influence this result?</h2>
+
+                <p>
+                    Several financial factors can affect affordability.
+                    Explore the topics below to understand your result.
+                </p>
+
+                <div class="assessment-cards ineligible-guidance-cards">
+
+                    <details class="ineligible-guidance-card">
+                        <summary>
+                            <span class="card-icon debt-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <rect
+                                        x="4" y="3" width="11" height="14" rx="2"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                    />
+                                    <path
+                                        d="M7 7h5M7 10h4"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                    />
+                                    <circle
+                                        cx="16.5" cy="16.5" r="4"
+                                        fill="white"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                    />
+                                    <path
+                                        d="M16.5 14v5M15 15h3"
+                                        stroke="currentColor"
+                                        stroke-width="1.3"
+                                        stroke-linecap="round"
+                                    />
+                                </svg>
+                            </span>
+
+                            <span class="card-text">
+                                <strong>Existing debt commitments</strong>
+                                <small>
+                                    Understand how your existing debt
+                                    may affect your loan eligibility.
+                                </small>
+                            </span>
+
+                            <span class="card-arrow" aria-hidden="true">▾</span>
+                        </summary>
+
+                        <div class="ineligible-card-details">
+                            <p>
+                                Existing loan repayments, credit cards
+                                and other debt commitments can reduce
+                                the amount available for additional
+                                monthly repayments.
+                            </p>
+
+                            <a href="Financial-Guidance.html">
+                                Read more about existing debt →
+                            </a>
+                        </div>
+                    </details>
+
+                    <details class="ineligible-guidance-card">
+                        <summary>
+                            <span class="card-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M4 16a8 8 0 1 1 16 0"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                    />
+                                    <path
+                                        d="M12 16l4-6"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                    />
+                                    <circle
+                                        cx="12" cy="16" r="1.5"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </span>
+
+                            <span class="card-text">
+                                <strong>Credit profile</strong>
+                                <small>
+                                    Learn how your credit history may
+                                    influence a lending decision.
+                                </small>
+                            </span>
+
+                            <span class="card-arrow" aria-hidden="true">▾</span>
+                        </summary>
+
+                        <div class="ineligible-card-details">
+                            <p>
+                                Credit history may be considered during
+                                a formal loan application. Your credit
+                                report contains information about your
+                                borrowing and repayment history.
+                            </p>
+
+                            <p>
+                                This simulator has not checked your
+                                credit report or credit score.
+                            </p>
+
+                            <a href="Financial-Guidance.html">
+                                Read more about your credit profile →
+                            </a>
+                        </div>
+                    </details>
+
+                    <details class="ineligible-guidance-card">
+                        <summary>
+                            <span class="card-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <rect
+                                        x="5" y="3" width="14" height="18" rx="2"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                    />
+                                    <path
+                                        d="M8 7h8M8 11h8M8 15h3M14 15h2"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                    />
+                                </svg>
+                            </span>
+
+                            <span class="card-text">
+                                <strong>Affordability concerns</strong>
+                                <small>
+                                    Understand how your income,
+                                    expenses and existing repayments
+                                    affect loan affordability.
+                                </small>
+                            </span>
+
+                            <span class="card-arrow" aria-hidden="true">▾</span>
+                        </summary>
+
+                        <div class="ineligible-card-details">
+                            <p>
+                                Your monthly income, living expenses
+                                and existing financial commitments
+                                may leave insufficient money for
+                                the requested monthly repayment.
+                            </p>
+
+                            <p>
+                                Reviewing your budget or considering
+                                a smaller loan amount may help you
+                                understand your borrowing options.
+                            </p>
+
+                            <a href="Financial-Guidance.html">
+                                Read more about affordability →
+                            </a>
+                        </div>
+                    </details>
+
+                </div>
+
+                <div class="form-actions">
+                    <a href="Financial-Details.html"
+                       class="secondary-button">
+                        ← Back
+                    </a>
+
+                    <a href="Financial-Guidance.html"
+                       class="primary-button">
+                        Explore ways to improve eligibility →
+                    </a>
+                </div>
+            </section>
+
+            <aside class="credit-notice">
+
+                <div class="notice-heading">
+                    <div class="shield-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2 20 5v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5l8-3Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+
+                    <div class="notice-copy">
+                        <h2>Why we provide this information</h2>
+                        <p>
+                            These resources help you make informed
+                            borrowing decisions. They do not change
+                            your estimated result and are not a loan
+                            offer or approval.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="notice-divider"></div>
+
+                <div class="important-to-know">
+                    <span class="information-icon-blue"
+                          aria-hidden="true">i</span>
+                    <h2>Important to know</h2>
+                </div>
+
+                <ul class="notice-list">
+                    <li>
+                        This is an estimated result, not a loan
+                        offer or approval.
+                    </li>
+
+                    <li>
+                        A formal application may involve a credit
+                        enquiry and detailed affordability assessment.
+                    </li>
+
+                    <li>
+                        Final loan terms may differ following
+                        a formal assessment.
+                    </li>
+                </ul>
+
+                <div class="notice-divider"></div>
+
+                <div class="notice-heading">
+                    <div class="book-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 6.5C9.5 4.5 6.5 4 3 4v14c3.5 0 6.5.5 9 2.5M12 6.5c2.5-2 5.5-2.5 9-2.5v14c-3.5 0-6.5.5-9 2.5M12 6.5v14"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+
+                    <div class="notice-copy">
+                        <h2>Tips for improving your eligibility</h2>
+                    </div>
+                </div>
+
+                <ul class="notice-list">
+                    <li>Review your credit report regularly.</li>
+                    <li>Reduce existing debt where possible.</li>
+                    <li>Make payments on time.</li>
+                    <li>Monitor your monthly income and expenses.</li>
+                    <li>Consider a smaller loan amount.</li>
+                </ul>
+
+            </aside>
+        </div>
+    </main>
+
+    <footer class="financial-footer">
+        <div class="footer-info-icon" aria-hidden="true">i</div>
+
+        <div class="financial-footer-content">
+            <h2>Important information</h2>
+            <p>
+                This is an educational simulation, not a loan approval
+                or formal credit assessment. The results are estimates
+                based on the financial information you provided.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

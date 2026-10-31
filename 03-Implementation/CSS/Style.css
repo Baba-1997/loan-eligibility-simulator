@@ -70,7 +70,7 @@
     pointer-events: none;
 }
 
-body > main:not(.financial-details-main):not(.credit-enquiry-notice-main) {
+body > main:not(.financial-details-main):not(.credit-enquiry-notice-main):not(.assessment-results) {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
@@ -543,129 +543,44 @@ body > main:not(.financial-details-main):not(.credit-enquiry-notice-main) {
 
 .notice-list li {
     display: grid;
-    grid-template-columns: 32px minmax(0, 1fr);
+    grid-template-columns: 20px minmax(0, 1fr);
     align-items: start;
-    gap: 14px;
-    margin: 0;
+    gap: 10px;
+    color: #24486e;
     font-size: 14px;
     line-height: 1.6;
 }
 
-.check-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: #52799a;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    box-sizing: border-box;
-}
-
-.notice-illustration {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
-    height: 100px;
-    margin: 24px auto 0;
-    border-radius: 50%;
-    background: radial-gradient(circle, #dcefff 0%, #eaf6ff 72%);
-}
-
-.document-icon {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 7px;
-    width: 60px;
-    height: 72px;
-    padding: 10px;
-    border: 3px solid #5b8bb7;
-    border-radius: 3px;
-    background-color: #f8fcff;
-    box-sizing: border-box;
-    transform: translate(-8px, -3px);
-}
-
-.document-icon span {
+.notice-list li::before {
     display: block;
-    width: 100%;
-    height: 3px;
-    border-radius: 2px;
-    background-color: #5b8bb7;
-}
-
-.illustration-shield {
-    position: absolute;
-    z-index: 2;
-    right: 28px;
-    bottom: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 46px;
-    border-radius: 45% 45% 50% 50%;
-    background-color: #087fce;
-    color: white;
-}
-
-.illustration-shield svg {
-    width: 30px;
-    height: 30px;
-}
-
-.financial-footer {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    margin: 0;
-    padding: 16px 3%;
-    border-top: 1px solid #e0e0e0;
-    background-color: white;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
-}
-
-.footer-info-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 36px;
-    height: 36px;
+    width: 7px;
+    height: 7px;
+    margin: 8px 0 0 5px;
     border-radius: 50%;
-    background-color: #000000;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
+    background-color: #1685e5;
+    content: "";
 }
 
-.financial-footer-content h2 {
-    margin: 0 0 4px;
-    color: #111111;
-    font-size: 16px;
+.keep-in-mind {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 24px;
+    padding: 18px;
+    border-radius: 10px;
+    background-color: #d9efff;
 }
 
-.financial-footer-content p {
+.keep-in-mind p {
     margin: 0;
-    color: #52657c;
+    color: #24486e;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .credit-enquiry-notice-main {
     display: block;
     width: 100%;
-    min-height: 0;
     margin: 0;
     padding: 0;
     background-color: white;
@@ -676,247 +591,138 @@ body > main:not(.financial-details-main):not(.credit-enquiry-notice-main) {
 
 .credit-enquiry-notice-page {
     display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(320px, 0.85fr);
+    grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.9fr);
     align-items: start;
-    gap: 32px;
+    gap: 36px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 32px 28px;
+    padding: 24px 3% 36px;
+    background-color: white;
     box-sizing: border-box;
 }
 
 .credit-enquiry-content {
-    width: 100%;
     min-width: 0;
-    padding: 0;
+    padding: 8px 0 16px;
+    background-color: white;
     box-sizing: border-box;
-}
-
-.credit-enquiry-content .page-label {
-    margin-bottom: 22px;
-}
-
-.credit-enquiry-content .progress-steps {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-    gap: 8px;
-    margin: 28px 0 34px;
-}
-
-.credit-enquiry-content .progress-step {
-    position: relative;
-    display: flex;
-    flex: 1 1 0;
-    flex-direction: column;
-    align-items: center;
-    min-width: 0;
-    text-align: center;
-}
-
-.credit-enquiry-content .progress-step p {
-    max-width: 100%;
-    margin: 8px 0 0;
-    font-size: 12px;
-    line-height: 1.3;
-    overflow-wrap: normal;
-    word-break: normal;
 }
 
 .credit-enquiry-content h1 {
     margin: 0 0 12px;
     color: #092b55;
     font-size: 28px;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
-.credit-enquiry-description {
-    margin: 0 0 20px;
+.credit-enquiry-content > p {
     color: #405c7e;
     font-size: 14px;
     line-height: 1.6;
 }
 
-.credit-information-panel {
-    display: grid;
-    grid-template-columns: 30px minmax(0, 1fr);
-    align-items: start;
-    gap: 14px;
+.credit-enquiry-notice-page .credit-notice {
     width: 100%;
-    margin: 0 0 16px;
-    padding: 18px;
-    border-radius: 12px;
-    background-color: #d9efff;
-    color: #10264a;
-    box-sizing: border-box;
-}
-
-.credit-information-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border: 2px solid #008cff;
-    color: #008cff;
-    font-size: 22px;
-    font-weight: bold;
-    box-sizing: border-box;
-}
-
-.credit-information-content {
     min-width: 0;
-}
-
-.credit-information-content h2 {
-    margin: 0 0 10px;
-    color: #002f87;
-    font-size: 17px;
-}
-
-.credit-information-content ul {
-    margin: 0;
-    padding-left: 20px;
-}
-
-.credit-information-content li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.credit-information-content li:last-child {
-    margin-bottom: 0;
-}
-
-.credit-acknowledgement {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    width: 100%;
-    margin: 0 0 16px;
-    padding: 16px;
-    background-color: #ff0000;
-    color: #111111;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1.5;
-    cursor: pointer;
+    padding: 28px;
+    border-radius: 12px;
+    background-color: #eaf6ff;
+    color: #24486e;
     box-sizing: border-box;
-}
-
-.credit-acknowledgement input {
-    flex-shrink: 0;
-    width: 22px;
-    height: 22px;
-    margin: 2px 0 0;
-    accent-color: #008cff;
-    cursor: pointer;
 }
 
 .credit-enquiry-notice-page .form-actions {
     display: flex;
-    flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 0;
 }
 
-.credit-enquiry-notice-page .secondary-button,
-.credit-enquiry-notice-page .form-actions .primary-button {
-    min-height: 44px;
-    padding: 0 24px;
+.credit-enquiry-notice-page .checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 24px;
+    padding: 16px;
+    border: 1px solid #d2d7de;
+    border-radius: 8px;
+    background-color: white;
+    color: #24486e;
+    line-height: 1.5;
 }
 
-.credit-enquiry-notice-page .credit-notice {
-    display: block;
-    width: 100%;
+.credit-enquiry-notice-page .checkbox-row input {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: #008cff;
+}
+
+.credit-enquiry-notice-page .checkbox-row label {
     min-width: 0;
-    margin: 0;
-    padding: 24px;
-    border-radius: 14px;
-    background-color: #eaf6ff;
+    font-size: 14px;
+}
+
+.financial-footer {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    width: calc(100% - 48px);
+    margin: 0 24px 24px;
+    padding: 20px 24px;
+    border: 1px solid #d9e4f0;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #24486e;
     box-sizing: border-box;
 }
 
-.credit-enquiry-notice-page .notice-heading {
-    display: grid;
-    grid-template-columns: 48px minmax(0, 1fr);
-    align-items: start;
-    gap: 14px;
-}
-
-.credit-enquiry-notice-page .notice-copy h2,
-.credit-enquiry-notice-page .keep-in-mind-heading h2 {
-    font-size: 20px;
-}
-
-.credit-enquiry-notice-page .notice-copy p {
-    font-size: 14px;
-    line-height: 1.65;
-}
-
-.credit-enquiry-notice-page .notice-divider {
-    margin: 20px 0;
-}
-
-.credit-enquiry-notice-page .keep-in-mind-heading {
-    display: grid;
-    grid-template-columns: 48px minmax(0, 1fr);
+.footer-info-icon {
+    display: flex;
     align-items: center;
-    gap: 14px;
-    margin-bottom: 16px;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #092b55;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.credit-enquiry-notice-page .notice-list {
-    gap: 14px;
-    padding-left: 0;
+.financial-footer-content h2 {
+    margin: 0 0 6px;
+    color: #092b55;
+    font-size: 16px;
 }
 
-.credit-enquiry-notice-page .notice-list li {
-    grid-template-columns: 32px minmax(0, 1fr);
-    gap: 12px;
-    font-size: 13px;
+.financial-footer-content p {
+    margin: 0;
+    color: #52657c;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-.credit-enquiry-notice-page .notice-illustration {
-    margin-top: 20px;
-}
-
-@media (max-width: 900px) {
-    .site-header {
-        padding: 12px 20px;
-    }
-
-    .logo img {
-        width: 130px;
-    }
-
-    .main-nav {
-        gap: 6px;
-        margin-left: 14px;
-    }
-
-    .main-nav a {
-        padding: 7px 8px;
-        font-size: 12px;
-    }
-
+@media (max-width: 1100px) {
     .financial-details-page {
-        gap: 20px;
+        grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.9fr);
+        gap: 24px;
+    }
+
+    .financial-details-page .credit-notice {
+        padding: 24px;
     }
 
     .credit-enquiry-notice-page {
         grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.9fr);
-        gap: 20px;
-        padding: 24px 20px;
+        gap: 24px;
     }
 
     .credit-enquiry-notice-page .credit-notice {
-        padding: 20px;
+        padding: 24px;
     }
 }
 
@@ -945,7 +751,7 @@ body > main:not(.financial-details-main):not(.credit-enquiry-notice-main) {
         font-size: 12px;
     }
 
-    body > main:not(.financial-details-main):not(.credit-enquiry-notice-main) {
+    body > main:not(.financial-details-main):not(.credit-enquiry-notice-main):not(.assessment-results) {
         grid-template-columns: minmax(0, 1fr);
         gap: 24px;
         padding: 28px 5%;
@@ -999,59 +805,1764 @@ body > main:not(.financial-details-main):not(.credit-enquiry-notice-main) {
         left: calc(50% + 19px);
         width: calc(100% - 38px);
     }
+}
 
-    .progress-step span {
-        width: 34px;
-        height: 34px;
-        font-size: 14px;
+main.assessment-results {
+    display: block;
+    width: 100%;
+    max-width: none;
+    min-height: 0;
+    margin: 0;
+    padding: 32px 4.5%;
+    background: #ffffff;
+    color: #10264a;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+main.assessment-results .assessment-results-page {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(320px, 1fr);
+    align-items: start;
+    gap: 32px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+main.assessment-results .assessment-results-page > * {
+    min-width: 0;
+}
+
+main.assessment-results .assessment-result-content {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+main.assessment-results .page-label {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0 24px;
+    padding: 8px 16px;
+    border-radius: 24px;
+    background: #e0f1ff;
+    color: #008cff;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+main.assessment-results .progress-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+    gap: 8px;
+    width: 100%;
+    margin: 24px 0 32px;
+}
+
+main.assessment-results .progress-step {
+    position: relative;
+    display: flex;
+    flex: initial;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    gap: 8px;
+    text-align: center;
+}
+
+main.assessment-results .progress-step:not(:last-child)::after {
+    position: absolute;
+    top: 19px;
+    left: calc(50% + 23px);
+    width: calc(100% - 38px);
+    height: 2px;
+    background: #b8c6d8;
+    content: "";
+}
+
+main.assessment-results .progress-step span {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #cbd9e8;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #163b63;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+main.assessment-results .progress-step.active span {
+    border: 2px solid #008cff;
+    color: #008cff;
+}
+
+main.assessment-results .progress-step p {
+    margin: 0;
+    color: #163b63;
+    font-size: 12px;
+    line-height: 1.4;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+main.assessment-results .assessment-result-content h1 {
+    width: 100%;
+    max-width: none;
+    margin: 0 0 12px;
+    color: #082b52;
+    font-size: 32px;
+    line-height: 1.25;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+main.assessment-results .assessment-subtitle {
+    width: 100%;
+    max-width: none;
+    margin: 0 0 20px;
+    color: #526b86;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+main.assessment-results .loan-result-message {
+    width: 100%;
+    margin: 20px 0;
+    padding: 18px 20px;
+    border: 1px solid #c6eed5;
+    border-radius: 12px;
+    background: #e4f7eb;
+    color: #008f5a;
+    box-sizing: border-box;
+}
+
+main.assessment-results .loan-result-message h2 {
+    margin: 0;
+    color: #008f5a;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+main.assessment-results .loan-result-message p {
+    margin: 8px 0 0;
+    line-height: 1.5;
+}
+
+main.assessment-results .assessment-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+main.assessment-results .assessment-cards > section {
+    min-width: 0;
+    max-width: none;
+    width: auto;
+    box-sizing: border-box;
+}
+
+main.assessment-results .estimated-monthly-repayment,
+main.assessment-results .estimated-total-repayment,
+main.assessment-results .estimated-remaining-disposable-income {
+    min-height: 100px;
+    padding: 16px;
+    border: 1px solid #d9e4f0;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+main.assessment-results .estimated-monthly-repayment h2,
+main.assessment-results .estimated-total-repayment h2,
+main.assessment-results .estimated-remaining-disposable-income h2 {
+    margin: 0 0 8px;
+    color: #082b52;
+    font-size: 20px;
+    line-height: 1.3;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+main.assessment-results .estimated-monthly-repayment p,
+main.assessment-results .estimated-total-repayment p,
+main.assessment-results .estimated-remaining-disposable-income p {
+    margin: 0;
+    color: #526b86;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+main.assessment-results .assessment-cards .your-financial-details {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #d9e4f0;
+    border-radius: 12px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+main.assessment-results .your-financial-details h2 {
+    margin: 0 0 12px;
+    color: #082b52;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+main.assessment-results .financial-detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid #edf1f5;
+    box-sizing: border-box;
+}
+
+main.assessment-results .financial-detail-row:last-child {
+    border-bottom: 0;
+}
+
+main.assessment-results .financial-detail-row span {
+    flex: 1;
+    min-width: 0;
+    color: #526b86;
+    overflow-wrap: break-word;
+}
+
+main.assessment-results .financial-detail-row strong {
+    flex-shrink: 0;
+    color: #082b52;
+    text-align: right;
+    white-space: nowrap;
+}
+
+main.assessment-results .assessment-results-page > .credit-notice {
+    display: block;
+    align-self: start;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    padding: 28px;
+    border: 1px solid #d5e8f8;
+    border-radius: 16px;
+    background: #e4f3ff;
+    color: #24486e;
+    box-sizing: border-box;
+}
+
+main.assessment-results .credit-notice .notice-heading,
+main.assessment-results .credit-notice .important-to-know {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    align-items: start;
+    gap: 16px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+main.assessment-results .credit-notice .notice-copy {
+    width: 100%;
+    min-width: 0;
+}
+
+main.assessment-results .credit-notice .notice-copy h2,
+main.assessment-results .credit-notice .important-to-know h2 {
+    margin: 0 0 12px;
+    color: #082b52;
+    font-size: 20px;
+    line-height: 1.4;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+main.assessment-results .credit-notice .notice-copy p {
+    width: 100%;
+    margin: 0;
+    color: #24486e;
+    font-size: 14px;
+    line-height: 1.65;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+main.assessment-results .credit-notice .notice-divider {
+    width: 100%;
+    height: 1px;
+    margin: 24px 0;
+    border: 0;
+    background: #c9e1f5;
+}
+
+main.assessment-results .credit-notice .important-to-know {
+    align-items: center;
+}
+
+main.assessment-results .credit-notice .notice-list {
+    display: block;
+    width: 100%;
+    margin: 16px 0 0;
+    padding: 0 0 0 18px;
+    list-style: disc;
+    box-sizing: border-box;
+}
+
+main.assessment-results .credit-notice .notice-list li {
+    display: list-item;
+    width: auto;
+    margin: 0 0 12px;
+    padding: 0;
+    color: #24486e;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+main.assessment-results .credit-notice .notice-list li::before {
+    content: none;
+}
+
+main.assessment-results .credit-notice .notice-list li:last-child {
+    margin-bottom: 0;
+}
+
+main.assessment-results .credit-notice .shield-icon,
+main.assessment-results .credit-notice .information-icon-blue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    background: #0095ff;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+main.assessment-results .credit-notice .shield-icon svg {
+    display: block;
+    width: 26px;
+    height: 26px;
+}
+
+main.assessment-results .credit-notice .information-icon-blue {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+main.assessment-results .form-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+main.assessment-results .form-actions .primary-button,
+main.assessment-results .form-actions .secondary-button {
+    width: auto;
+    max-width: 100%;
+    min-height: 44px;
+    white-space: normal;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+    main.assessment-results {
+        padding: 28px 3%;
     }
 
-    .progress-step p {
-        font-size: 11px;
+    main.assessment-results .assessment-results-page {
+        grid-template-columns: minmax(0, 1.5fr) minmax(300px, 1fr);
+        gap: 24px;
     }
 
-    .form-actions {
-        flex-wrap: wrap;
+    main.assessment-results .assessment-results-page > .credit-notice {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 760px) {
+    main.assessment-results .assessment-results-page {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
     }
 
-    .financial-details-page .credit-notice {
+    main.assessment-results .assessment-results-page > .credit-notice {
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    main.assessment-results {
+        padding: 20px 16px;
+    }
+
+    main.assessment-results .assessment-result-content h1 {
+        font-size: 27px;
+    }
+
+    main.assessment-results .assessment-cards {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    main.assessment-results .assessment-cards .your-financial-details {
+        grid-column: 1 / -1;
+    }
+
+    main.assessment-results .assessment-results-page > .credit-notice {
         padding: 20px;
     }
 
-    .notice-heading,
-    .keep-in-mind-heading {
+    main.assessment-results .credit-notice .notice-heading,
+    main.assessment-results .credit-notice .important-to-know {
         grid-template-columns: 40px minmax(0, 1fr);
         gap: 12px;
     }
 
-    .shield-icon,
-    .information-icon-blue {
+    main.assessment-results .credit-notice .shield-icon,
+    main.assessment-results .credit-notice .information-icon-blue {
         width: 40px;
         height: 40px;
+        min-width: 40px;
     }
 
-    .notice-copy h2,
-    .keep-in-mind-heading h2 {
-        font-size: 18px;
-    }
-
-    .notice-list {
-        padding-left: 0;
-    }
-
-    .credit-enquiry-content .progress-steps {
-        gap: 4px;
-    }
-
-    .credit-enquiry-content .progress-step p {
-        font-size: 10px;
-    }
-
-    .credit-information-panel {
-        padding: 14px;
-    }
-
-    .credit-acknowledgement {
-        padding: 12px;
+    main.assessment-results .financial-detail-row {
+        gap: 12px;
     }
 }
+.financial-details-page .notice-list,
+.credit-enquiry-notice-page .notice-list {
+    .financial-details-page .credit-notice .notice-list,
+.credit-enquiry-notice-page .credit-notice .notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.financial-details-page .credit-notice .notice-list li,
+.credit-enquiry-notice-page .credit-notice .notice-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    color: #24486e;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.financial-details-page .credit-notice .notice-list li::before,
+.credit-enquiry-notice-page .credit-notice .notice-list li::before {
+    content: "✓";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 26px;
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    border-radius: 50%;
+    background-color: #547fa3;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+}
+.financial-details-page .credit-notice .notice-list li,
+.credit-enquiry-notice-page .credit-notice .notice-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    color: #24486e;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.financial-details-page .credit-notice .notice-list li::before,
+.credit-enquiry-notice-page .credit-notice .notice-list li::before {
+    content: "✓";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 26px;
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    border-radius: 50%;
+    background-color: #547fa3;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}.financial-details-page .credit-notice > img,
+.credit-enquiry-notice-page .credit-notice > img {
+    display: block;
+    width: 90px;
+    max-width: 100%;
+    height: auto;
+    margin: 24px auto 0;
+}
+
+.financial-details-page .credit-notice > svg,
+.credit-enquiry-notice-page .credit-notice > svg {
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin: 24px auto 0;
+}
+
+.credit-enquiry-notice-page .credit-information-panel {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #d9efff;
+    box-sizing: border-box;
+}
+
+.credit-enquiry-notice-page .credit-information-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #008cff;
+    color: #008cff;
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.credit-enquiry-notice-page .credit-information-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.credit-enquiry-notice-page .credit-information-content h2 {
+    margin: 0 0 12px;
+    color: #092b55;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.credit-enquiry-notice-page .credit-information-content ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.credit-enquiry-notice-page .credit-information-content li {
+    margin-bottom: 8px;
+    color: #092b55;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.credit-enquiry-notice-page .credit-acknowledgement {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    margin: 16px 0;
+    padding: 16px;
+    background-color: #ff0000;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.credit-enquiry-notice-page .credit-acknowledgement input[type="checkbox"] {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: #008cff;
+}
+
+.credit-enquiry-notice-page .credit-notice .notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.credit-enquiry-notice-page .credit-notice .notice-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #24486e;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.credit-enquiry-notice-page .credit-notice .notice-list li::before {
+    display: none;
+    content: none;
+}
+
+.credit-enquiry-notice-page .credit-notice .check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 26px;
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    border-radius: 50%;
+    background-color: #547fa3;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.credit-enquiry-notice-page .credit-notice .notice-list li > span:last-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.credit-enquiry-notice-page .notice-illustration {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 110px;
+    margin: 28px auto 0;
+}
+
+.credit-enquiry-notice-page .document-icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 62px;
+    height: 78px;
+    padding: 17px 10px;
+    border: 2px solid #547fa3;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.credit-enquiry-notice-page .document-icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #547fa3;
+}
+
+.credit-enquiry-notice-page .document-icon span:last-child {
+    width: 65%;
+}
+
+.credit-enquiry-notice-page .illustration-shield {
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 3px solid #eaf6ff;
+    border-radius: 50%;
+    background-color: #008cff;
+    color: white;
+    box-sizing: border-box;
+}
+
+.credit-enquiry-notice-page .illustration-shield svg {
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width: 760px) {
+    .credit-enquiry-notice-page .credit-information-panel {
+        padding: 16px;
+    }
+
+    .credit-enquiry-notice-page .credit-acknowledgement {
+        padding: 14px;
+    }
+}
+.financial-details-page .credit-notice .notice-list li::before {
+    display: none;
+    content: none;
+}
+
+.financial-details-page .credit-notice .notice-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.financial-details-page .credit-notice .check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 26px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #547fa3;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.financial-details-page .credit-notice .notice-illustration {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 110px;
+    margin: 28px auto 0;
+}
+
+.financial-details-page .credit-notice .notice-illustration svg {
+    width: 80px;
+    height: 80px;
+    max-width: 100%;
+}
+
+.financial-details-page .credit-notice .notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.financial-details-page .credit-notice .notice-list li {
+    display: grid;
+    grid-template-columns: 26px minmax(0, 1fr);
+    column-gap: 18px;
+    align-items: start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.financial-details-page .credit-notice .notice-list li::before {
+    display: none;
+    content: none;
+}
+
+.financial-details-page .credit-notice .check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    border-radius: 50%;
+    background-color: #547fa3;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.financial-details-page .credit-notice .notice-list li > span:last-child {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.financial-details-page .credit-notice .notice-illustration {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 110px;
+    margin: 24px auto 0;
+}
+
+.financial-details-page .credit-notice .notice-illustration svg {
+    width: 80px;
+    height: 80px;
+    max-width: 100%;
+}
+
+main.ineligible-results .assessment-results-page {
+    grid-template-columns: minmax(0, 1.65fr) minmax(300px, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+main.ineligible-results .assessment-result-content h1 {
+    font-size: 27px;
+    margin-bottom: 4px;
+}
+
+main.ineligible-results .assessment-subtitle {
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+main.ineligible-results .loan-result-message {
+    position: relative;
+    background-color: #fce7e9;
+    border: none;
+    border-radius: 14px;
+    padding: 18px 20px 18px 72px;
+    margin: 12px 0 16px;
+    color: #343434;
+}
+
+main.ineligible-results .loan-result-message::before {
+    content: "×";
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 3px solid #ff202b;
+    border-radius: 50%;
+    color: #ff202b;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+main.ineligible-results .loan-result-message h2 {
+    color: #ed3343;
+    font-size: 20px;
+    margin: 0 0 8px;
+}
+
+main.ineligible-results .loan-result-message p {
+    color: #343434;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+main.ineligible-results .assessment-result-content > h2 {
+    font-size: 19px;
+    color: #222;
+    margin: 14px 0 5px;
+}
+
+main.ineligible-results .assessment-result-content > p:not(.page-label):not(.assessment-subtitle) {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #444;
+    margin: 0 0 14px;
+}
+
+main.ineligible-results .assessment-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+main.ineligible-results .assessment-cards > section {
+    position: relative;
+    width: 100%;
+    min-height: 68px;
+    padding: 14px 42px 14px 58px;
+    background-color: #ffffff;
+    border: 1px solid #aeb4bb;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+main.ineligible-results .assessment-cards > section h3 {
+    color: #222;
+    font-size: 15px;
+    margin: 0 0 4px;
+}
+
+main.ineligible-results .assessment-cards > section p {
+    color: #52657c;
+    font-size: 12px;
+    line-height: 1.45;
+    margin: 0;
+}
+
+main.ineligible-results .existing-debt-commitments::before {
+    content: "▤";
+}
+
+main.ineligible-results .credit-score-or-credit-report::before {
+    content: "◉";
+}
+
+main.ineligible-results .affordability-concerns::before {
+    content: "▣";
+}
+
+main.ineligible-results .assessment-cards > section::before {
+    position: absolute;
+    left: 17px;
+    top: 20px;
+    color: #008cff;
+    font-size: 23px;
+}
+
+main.ineligible-results .assessment-cards > section::after {
+    content: "▾";
+    position: absolute;
+    right: 16px;
+    top: 22px;
+    color: #008cff;
+    font-size: 20px;
+}
+
+main.ineligible-results .form-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+main.ineligible-results .form-actions .secondary-button {
+    min-width: 120px;
+    border-radius: 10px;
+}
+
+main.ineligible-results .form-actions .primary-button {
+    background-color: #008cff;
+    border-color: #008cff;
+    border-radius: 10px;
+}
+
+main.ineligible-results .credit-notice {
+    background-color: #e4f3ff;
+    border: none;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+main.ineligible-results .credit-notice .notice-heading,
+main.ineligible-results .credit-notice .important-to-know {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+}
+
+main.ineligible-results .credit-notice .notice-copy h2,
+main.ineligible-results .credit-notice .important-to-know h2 {
+    color: #092b55;
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+main.ineligible-results .credit-notice .notice-copy p {
+    color: #526b86;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+main.ineligible-results .credit-notice .notice-divider {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #c6deef;
+}
+
+main.ineligible-results .credit-notice .notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 14px 0 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+main.ineligible-results .credit-notice .notice-list li {
+    display: list-item;
+    color: #526b86;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+main.ineligible-results .credit-notice .notice-list li::before {
+    display: none;
+    content: none;
+}
+
+@media (max-width: 760px) {
+    main.ineligible-results .assessment-results-page {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    main.ineligible-results .loan-result-message {
+        padding-left: 65px;
+    }
+
+    main.ineligible-results .form-actions {
+        flex-wrap: wrap;
+    }
+}
+
+main.ineligible-results .credit-notice .notice-heading,
+main.ineligible-results .credit-notice .important-to-know {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    column-gap: 12px;
+    align-items: center;
+}
+
+main.ineligible-results .credit-notice .notice-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+main.ineligible-results .credit-notice .notice-copy h2,
+main.ineligible-results .credit-notice .important-to-know h2 {
+    margin: 0 0 8px;
+    text-align: left;
+    line-height: 1.4;
+}
+
+main.ineligible-results .credit-notice .notice-copy p {
+    margin: 0;
+    text-align: left;
+    line-height: 1.6;
+}
+
+main.ineligible-results .credit-notice .notice-list {
+    margin: 12px 0 0 54px;
+    padding-left: 16px;
+    text-align: left;
+}
+
+main.ineligible-results .credit-notice .book-icon,
+main.ineligible-results .credit-notice .shield-icon,
+main.ineligible-results .credit-notice .information-icon-blue {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+}
+
+main.ineligible-results .credit-notice .book-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d91ff;
+    color: white;
+    border-radius: 50%;
+}
+
+main.ineligible-results .credit-notice .book-icon svg {
+    width: 25px;
+    height: 25px;
+}
+
+main.ineligible-results .assessment-results-page {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(300px, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+main.ineligible-results .credit-notice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 28px 22px;
+    background-color: #e4f3ff;
+    border-radius: 12px;
+}
+
+main.ineligible-results .credit-notice .notice-heading,
+main.ineligible-results .credit-notice .important-to-know {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    column-gap: 12px;
+    align-items: start;
+}
+
+main.ineligible-results .credit-notice .notice-copy h2,
+main.ineligible-results .credit-notice .important-to-know h2 {
+    margin: 0 0 10px;
+    line-height: 1.4;
+}
+
+main.ineligible-results .credit-notice .notice-copy p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+main.ineligible-results .credit-notice .notice-list {
+    margin: 14px 0 18px 54px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+main.ineligible-results .credit-notice .notice-list li {
+    line-height: 1.7;
+}
+
+main.ineligible-results .credit-notice .notice-divider {
+    width: 100%;
+    margin: 20px 0;
+    border-top: 1px solid #c6deef;
+}
+
+@media (max-width: 760px) {
+    main.ineligible-results .assessment-results-page {
+        grid-template-columns: 1fr;
+    }
+
+    main.ineligible-results .credit-notice {
+        height: auto;
+        gap: 14px;
+    }
+}
+
+main.ineligible-results .credit-notice {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 28px 24px;
+}
+
+main.ineligible-results .credit-notice .notice-heading {
+    margin-bottom: 12px;
+}
+
+main.ineligible-results .credit-notice .notice-copy h2 {
+    margin-bottom: 14px;
+}
+
+main.ineligible-results .credit-notice .notice-copy p {
+    line-height: 1.8;
+}
+
+main.ineligible-results .credit-notice .important-to-know {
+    margin: 12px 0 16px;
+}
+
+main.ineligible-results .credit-notice .notice-list {
+    margin-top: 12px;
+    margin-bottom: 18px;
+    gap: 18px;
+}
+
+main.ineligible-results .credit-notice .notice-divider {
+    margin: 24px 0;
+}
+
+main.ineligible-results .credit-notice .notice-list li {
+    line-height: 1.8;
+}
+main.ineligible-results .progress-step.active p {
+    color: #2d91ff;
+    font-weight: 600;
+}
+
+main.ineligible-results .existing-debt-commitments::before,
+main.ineligible-results .credit-score-or-credit-report::before,
+main.ineligible-results .affordability-concerns::before {
+    content: none;
+}
+
+main.ineligible-results .assessment-cards .card-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2d91ff;
+}
+
+main.ineligible-results .assessment-cards .card-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+main.ineligible-results .assessment-cards .debt-icon {
+    color: #555555;
+}
+
+main.ineligible-results .assessment-cards .guidance-card-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+main.ineligible-results .assessment-cards .guidance-card-link section {
+    position: relative;
+    width: 100%;
+    min-height: 68px;
+    padding: 14px 42px 14px 58px;
+    background-color: #ffffff;
+    border: 1px solid #aeb4bb;
+    border-radius: 12px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+main.ineligible-results .assessment-cards .guidance-card-link section::after {
+    content: "▾";
+    position: absolute;
+    right: 16px;
+    top: 22px;
+    color: #008cff;
+    font-size: 20px;
+}
+
+main.ineligible-results .assessment-cards .guidance-card-link:hover section {
+    border-color: #2d91ff;
+    background-color: #f5faff;
+}
+
+main.ineligible-results .assessment-cards .guidance-card-link:focus-visible {
+    outline: 2px solid #2d91ff;
+    outline-offset: 3px;
+    border-radius: 12px;
+}
+
+main.financial-guidance .assessment-results-page {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(300px, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+main.financial-guidance .assessment-result-content {
+    min-width: 0;
+}
+
+main.financial-guidance .assessment-result-content h1 {
+    font-size: 27px;
+    margin: 12px 0 6px;
+}
+
+main.financial-guidance .assessment-subtitle {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+main.financial-guidance .assessment-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+}
+
+main.financial-guidance .assessment-cards > section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    min-height: 76px;
+    box-sizing: border-box;
+    padding: 14px 42px 14px 62px;
+    background-color: #ffffff;
+    border: 1px solid #aeb4bb;
+    border-radius: 12px;
+}
+
+main.financial-guidance .assessment-cards > section h2 {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #222222;
+    margin: 0 0 4px;
+}
+
+main.financial-guidance .assessment-cards > section p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #52657c;
+    margin: 0;
+}
+
+main.financial-guidance .assessment-cards .card-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: #2d91ff;
+}
+
+main.financial-guidance .assessment-cards .card-icon svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+main.financial-guidance .assessment-cards .debt-icon {
+    color: #555555;
+}
+
+main.financial-guidance .assessment-cards > section::before {
+    content: none;
+}
+
+main.financial-guidance .assessment-cards > section::after {
+    content: "▾";
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #008cff;
+    font-size: 20px;
+}
+
+main.financial-guidance .form-actions {
+    display: flex;
+    margin-top: 16px;
+}
+
+main.financial-guidance .form-actions .secondary-button {
+    min-width: 120px;
+    border-radius: 10px;
+}
+
+main.financial-guidance .credit-notice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+    box-sizing: border-box;
+    padding: 24px;
+    background-color: #e4f3ff;
+    border-radius: 12px;
+}
+
+main.financial-guidance .credit-notice .notice-heading,
+main.financial-guidance .credit-notice .important-to-know {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    column-gap: 12px;
+    align-items: start;
+}
+
+main.financial-guidance .credit-notice .notice-copy h2,
+main.financial-guidance .credit-notice .important-to-know h2 {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #092b55;
+    margin: 0 0 10px;
+}
+
+main.financial-guidance .credit-notice .notice-copy p {
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+main.financial-guidance .credit-notice .notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px 0 16px 54px;
+    padding-left: 16px;
+    list-style: disc;
+}
+
+main.financial-guidance .credit-notice .notice-list li {
+    display: list-item;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+main.financial-guidance .credit-notice .notice-list li::before {
+    display: none;
+    content: none;
+}
+
+main.financial-guidance .credit-notice .notice-divider {
+    width: 100%;
+    margin: 18px 0;
+    border-top: 1px solid #c6deef;
+}
+
+main.financial-guidance .credit-notice .book-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: #2d91ff;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+main.financial-guidance .credit-notice .book-icon svg {
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width: 760px) {
+    main.financial-guidance .assessment-results-page {
+        grid-template-columns: 1fr;
+    }
+
+    main.financial-guidance .credit-notice {
+        gap: 12px;
+    }
+}
+
+main.ineligible-results .assessment-cards > section,
+main.ineligible-results .assessment-cards .guidance-card-link > section {
+    position: relative;
+    width: 100%;
+    height: 68px;
+    min-height: 68px;
+    padding: 12px 42px 12px 58px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+main.ineligible-results .assessment-cards .guidance-card-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+main.ineligible-results .assessment-cards > section h3,
+main.ineligible-results .assessment-cards .guidance-card-link h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+}
+
+main.ineligible-results .assessment-cards > section p,
+main.ineligible-results .assessment-cards .guidance-card-link p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+main.financial-guidance .assessment-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main.financial-guidance .guidance-card {
+    display: block;
+    width: 100%;
+    border: 1px solid #aeb4bb;
+    border-radius: 12px;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+main.financial-guidance .guidance-card summary {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 76px;
+    padding: 14px 18px;
+    box-sizing: border-box;
+    cursor: pointer;
+    list-style: none;
+}
+
+main.financial-guidance .guidance-card summary::-webkit-details-marker {
+    display: none;
+}
+
+main.financial-guidance .guidance-card .card-icon {
+    position: static;
+    transform: none;
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    color: #2d91ff;
+}
+
+main.financial-guidance .guidance-card .debt-icon {
+    color: #555555;
+}
+
+main.financial-guidance .guidance-card .card-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    gap: 5px;
+}
+
+main.financial-guidance .guidance-card .card-text strong {
+    font-size: 15px;
+    color: #092b55;
+    line-height: 1.4;
+}
+
+main.financial-guidance .guidance-card .card-text small {
+    font-size: 12px;
+    color: #52657c;
+    line-height: 1.5;
+}
+
+main.financial-guidance .guidance-card .card-arrow {
+    flex-shrink: 0;
+    color: #008cff;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+main.financial-guidance .guidance-card[open] .card-arrow {
+    transform: rotate(180deg);
+}
+
+main.financial-guidance .guidance-card[open] {
+    border-color: #2d91ff;
+}
+
+main.financial-guidance .guidance-card .guidance-details {
+    padding: 18px 24px 22px 62px;
+    border-top: 1px solid #d9e6f2;
+    background-color: #f7fbff;
+}
+
+main.financial-guidance .guidance-details h3 {
+    margin: 0 0 12px;
+    font-size: 16px;
+    color: #092b55;
+}
+
+main.financial-guidance .guidance-details p,
+main.financial-guidance .guidance-details li {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #52657c;
+}
+
+main.financial-guidance .guidance-details p {
+    margin: 0 0 12px;
+}
+
+main.financial-guidance .guidance-details ul {
+    padding-left: 20px;
+    margin: 10px 0;
+    list-style: disc;
+}
+
+main.financial-guidance .guidance-details li {
+    display: list-item;
+    margin-bottom: 8px;
+}
+
+main.financial-guidance .guidance-details li::before {
+    content: none;
+    display: none;
+}
+
+main.financial-guidance .guidance-card summary:focus-visible {
+    outline: 2px solid #2d91ff;
+    outline-offset: -3px;
+}
+
+@media (max-width: 760px) {
+    main.financial-guidance .guidance-card .guidance-details {
+        padding: 16px 20px;
+    }
+}
+
+main.ineligible-results .ineligible-guidance-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+main.ineligible-results .ineligible-guidance-card {
+    display: block;
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    background: #ffffff;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+main.ineligible-results .ineligible-guidance-card summary {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 68px;
+    padding: 14px 18px;
+    cursor: pointer;
+    list-style: none;
+}
+
+main.ineligible-results .ineligible-guidance-card summary::-webkit-details-marker {
+    display: none;
+}
+
+main.ineligible-results .ineligible-guidance-card .card-icon {
+    position: static;
+    transform: none;
+    flex: 0 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+main.ineligible-results .ineligible-guidance-card .card-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+main.ineligible-results .ineligible-guidance-card .card-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 5px;
+}
+
+main.ineligible-results .ineligible-guidance-card .card-text strong {
+    font-size: 15px;
+    color: #092b55;
+}
+
+main.ineligible-results .ineligible-guidance-card .card-text small {
+    font-size: 12px;
+    color: #52657c;
+    line-height: 1.5;
+}
+
+main.ineligible-results .ineligible-guidance-card .card-arrow {
+    color: #008cff;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+main.ineligible-results .ineligible-guidance-card[open] .card-arrow {
+    transform: rotate(180deg);
+}
+
+main.ineligible-results .ineligible-card-details {
+    padding: 16px 20px 20px 62px;
+    border-top: 1px solid #d9e6f2;
+    background: #f7fbff;
+}
+
+main.ineligible-results .ineligible-card-details p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #52657c;
+    margin: 0 0 12px;
+}
+
+main.ineligible-results .ineligible-card-details a {
+    color: #007bff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+main.ineligible-results .ineligible-card-details a:hover {
+    text-decoration: underline;
+}
+
+main.ineligible-results .ineligible-guidance-card summary:focus-visible {
+    outline: 2px solid #008cff;
+    outline-offset: -3px;
+}
+
+@media (max-width: 760px) {
+    main.ineligible-results .ineligible-card-details {
+        padding: 16px 20px;
+    }
+}
+

@@ -115,5 +115,6 @@ financialForm.addEventListener("submit", function(event) {
         JSON.stringify(assessmentData)
     );
 
+
     window.location.href = "Credit-Enquiry.html";
 });
